@@ -5,3 +5,19 @@
 .example-spacer {
     flex: 1 1 auto;
 }
+
+.transparent-background {
+    background-color: #181818;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0px auto;
+    background-color: #181818;
+}
+
+.button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    padding: 30px;
+}

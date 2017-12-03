@@ -4,7 +4,10 @@
 
 
 body {
+    font-family: 'Montserrat', sans-serif;
+    color: whitesmoke;
     margin: 0;
     padding: 0;
-    background-color: lightcyan;
+    font-size: larger;
+    background-color: #181818;
 }

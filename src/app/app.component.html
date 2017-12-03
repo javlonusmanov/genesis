@@ -1,12 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-
-<mat-toolbar class="mat-elevation-z6" color="black">
-        <span>GENESIS</span>
+<mat-toolbar class="transparent-background">
         <span class="example-spacer"></span>
-        <button mat-button>Home</button>
-        <button mat-button>Work</button>
-        <button mat-button>Blog</button>
-        <button mat-button>About</button>
+        <h1>GENESIS</h1>
+        <span class="example-spacer"></span>
+        <button class="button" mat-button disableRipple>Home</button>
+        <button class="button" mat-button disableRipple>Work</button>
+        <button class="button" mat-button disableRipple>Blog</button>
+        <button class="button" mat-button disableRipple>About</button>
+        <span class="example-spacer"></span>
 </mat-toolbar>
 
-<router-outlet></router-outlet>
+<div class="container">
+        <app-personal-summary></app-personal-summary>
+</div>
+
+<!--<router-outlet></router-outlet>-->

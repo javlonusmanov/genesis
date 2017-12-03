@@ -3,11 +3,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
+import { PersonalSummaryComponent } from './personal-summary/personal-summary.component';
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        PersonalSummaryComponent
     ],
     imports: [
         BrowserModule,
