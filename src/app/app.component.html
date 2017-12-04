@@ -1,16 +1,21 @@
-<mat-toolbar class="transparent-background">
-        <span class="example-spacer"></span>
-        <h1>GENESIS</h1>
-        <span class="example-spacer"></span>
-        <button class="button" mat-button disableRipple>Home</button>
-        <button class="button" mat-button disableRipple>Work</button>
-        <button class="button" mat-button disableRipple>Blog</button>
-        <button class="button" mat-button disableRipple>About</button>
-        <span class="example-spacer"></span>
-</mat-toolbar>
-
 <div class="container">
-        <app-personal-summary></app-personal-summary>
+
+    <app-header></app-header>
+
+    <app-personal-summary></app-personal-summary>
+
+    <!--<router-outlet></router-outlet>-->
+
+    <hr>
+
+    <mat-grid-list cols="3" rowHeight="2:1">
+        <mat-grid-tile>1</mat-grid-tile>
+        <mat-grid-tile>2</mat-grid-tile>
+        <mat-grid-tile>3</mat-grid-tile>
+    </mat-grid-list>
+
+    <hr>
+    <app-footer></app-footer>
 </div>
 
-<!--<router-outlet></router-outlet>-->
+
