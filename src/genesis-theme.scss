@@ -1,0 +1,72 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$md-mcgpalette0: (
+        50 : #181818,
+        100 : #181818,
+        200 : #181818,
+        300 : #181818,
+        400 : #181818,
+        500 : #181818,
+        600 : #181818,
+        700 : #181818,
+        800 : #181818,
+        900 : #181818,
+        A100 : #181818,
+        A200 : #181818,
+        A400 : #181818,
+        A700 : #181818,
+        contrast: (
+                50 : #181818,
+                100 : #181818,
+                200 : #181818,
+                300 : #181818,
+                400 : #181818,
+                500 : #181818,
+                600 : #181818,
+                700 : #181818,
+                800 : #181818,
+                900 : #181818,
+                A100 : #181818,
+                A200 : #181818,
+                A400 : #181818,
+                A700 : #181818,
+        )
+);
+
+
+
+$genesis-app-primary: mat-palette($md-mcgpalette0);
+$genesis-app-accent: mat-palette($md-mcgpalette0);
+$genesis-app-warning: mat-palette($md-mcgpalette0);
+
+$genesis-app-theme: mat-light-theme($genesis-app-primary, $genesis-app-accent, $genesis-app-warning);
+$genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accent, $genesis-app-warning);
+
+@mixin custom-theme($theme) {
+  @include mat-core-theme($theme);
+  @include mat-button-theme($theme);
+  @include mat-toolbar-theme($theme);
+
+  body {
+    background-color: #181818;
+  }
+
+  .transparent-background {
+    background-color: #181818;
+  }
+
+  .mat-toolbar {
+    background-color: #181818;
+  }
+
+  .mat-button {
+    font-size: large;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@include angular-material-theme($genesis-dark-app-theme);
+@include custom-theme($genesis-dark-app-theme);
