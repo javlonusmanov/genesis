@@ -1,0 +1,14 @@
+.mat-button {
+    border: 1px solid whitesmoke;
+}
+
+.centered-container {
+    padding: 25px;
+    text-align:center;
+
+
+}
+
+div.centered-container button {
+    margin:0 auto; /* this will center  it */
+}
