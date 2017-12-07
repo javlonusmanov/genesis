@@ -1,8 +1,8 @@
 <mat-toolbar>
-  <h2>JAVLON|USMANOV</h2>
+  <h2>JAVLON | USMANOV</h2>
   <span class="example-spacer"></span>
-  <button class="button" mat-button disableRipple>Home</button>
-  <button class="button" mat-button disableRipple>Work</button>
-  <button class="button" mat-button disableRipple>Blog</button>
-  <button class="button" mat-button disableRipple>About</button>
+  <button class="button" mat-button disableRipple (click)="navigateTo('')">Home</button>
+  <button class="button" mat-button disableRipple (click)="navigateTo('work')">Work</button>
+  <button class="button" mat-button disableRipple (click)="navigateTo('blog')">Blog</button>
+  <button class="button" mat-button disableRipple (click)="navigateTo('about')">About</button>
 </mat-toolbar>
