@@ -6,19 +6,36 @@ import { AppComponent } from './app.component';
 import { PersonalSummaryComponent } from './personal-summary/personal-summary.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { WorkPageComponent } from './work-page/work-page.component';
+import { RouterModule, Routes } from "@angular/router";
+import { BlogPageComponent } from './blog-page/blog-page.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
+
+const routes: Routes = [
+    { path: '', component: HomePageComponent },
+    { path: 'work', component: WorkPageComponent },
+    { path: 'blog', component: BlogPageComponent },
+    { path: 'about', component: AboutPageComponent }
+];
 
 @NgModule({
     declarations: [
         AppComponent,
         PersonalSummaryComponent,
         HeaderComponent,
-        FooterComponent
+        FooterComponent,
+        HomePageComponent,
+        WorkPageComponent,
+        BlogPageComponent,
+        AboutPageComponent
     ],
     imports: [
         BrowserModule,
         MaterialModule,
-        BrowserAnimationsModule
+        BrowserAnimationsModule,
+        RouterModule.forRoot(routes)
     ],
     providers: [],
     bootstrap: [AppComponent]
