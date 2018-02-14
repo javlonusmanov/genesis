@@ -50,21 +50,15 @@ $genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accen
   @include mat-toolbar-theme($theme);
 
   body {
-    background-color: #181818;
+    background-color: #ffffff;
   }
 
-  .transparent-background {
-    background-color: #181818;
-  }
-
-  .mat-toolbar {
-    background-color: #181818;
+  .centered {
+    text-align: center;
   }
 
   .mat-button {
     font-size: large;
-    padding-left: 30px;
-    padding-right: 30px;
   }
 }
 
