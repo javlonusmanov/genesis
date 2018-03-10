@@ -11,6 +11,7 @@ import { WorkPageComponent } from './work-page/work-page.component';
 import { RouterModule, Routes } from "@angular/router";
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
+import { FooterContentComponent } from './footer-content/footer-content.component';
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
         HomePageComponent,
         WorkPageComponent,
         BlogPageComponent,
-        AboutPageComponent
+        AboutPageComponent,
+        FooterContentComponent
     ],
     imports: [
         BrowserModule,
