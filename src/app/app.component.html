@@ -1,15 +1,13 @@
 <div class="header dark-sections z-depth-1-half">
     <div class="container">
         <app-header></app-header>
-    </div>
-</div>
-<div class="content">
-    <div class="container">
-        <router-outlet></router-outlet>
+        <!--should be added only on home page <hr> -->
     </div>
 </div>
 
-<div class="footer dark-sections">
+<router-outlet></router-outlet>
+
+<div class="footer dark-sections z-depth-1-half-bottom">
     <div class="container">
         <app-footer></app-footer>
     </div>

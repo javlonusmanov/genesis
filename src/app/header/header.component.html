@@ -1,16 +1,9 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span class="example-spacer"></span>
-    <a  class="header-brand" color="accent" mat-button>JAVLON</a>
-    <span class="example-spacer"></span>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-    <span class="example-spacer"></span>
-    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('')">Home</a>
-    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('work')">Work</a>
+  <p class="header-brand">JAVLON</p><p class="header-brand" style="padding: 3px; color: red">|</p><p class="header-brand">USMANOV</p>
+  <span class="example-spacer"></span>
+  <a color="accent" mat-button disableRipple (click)="navigateTo('')">HOME</a>
+  <a color="accent" mat-button disableRipple (click)="navigateTo('work')">WORK</a>
 
-    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('blog')">Blog</a>
-    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('about')">About</a>
-    <span class="example-spacer"></span>
-  </mat-toolbar-row>
+  <a color="accent" mat-button disableRipple (click)="navigateTo('blog')">BLOG</a>
+  <a color="accent" mat-button disableRipple (click)="navigateTo('about')">ABOUT</a>
 </mat-toolbar>
