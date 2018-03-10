@@ -5,8 +5,11 @@ import {
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    MatCardModule, MatGridList, MatGridListModule
+    MatCardModule,
+    MatGridList,
+    MatGridListModule
 } from '@angular/material';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
     imports: [
@@ -15,7 +18,8 @@ import {
         MatToolbarModule,
         MatIconModule,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatDividerModule
     ],
     exports: [
         MatButtonModule,
@@ -23,7 +27,8 @@ import {
         MatToolbarModule,
         MatIconModule,
         MatCardModule,
-        MatGridListModule
+        MatGridListModule,
+        MatDividerModule
     ]
 })
 export class MaterialModule {
