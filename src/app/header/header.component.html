@@ -1,8 +1,16 @@
-<mat-toolbar>
-  <a class="genesis-header-brand">JAVLON</a>
-  <span class="example-spacer"></span>
-  <button class="button" mat-button disableRipple (click)="navigateTo('')">Home</button>
-  <button class="button" mat-button disableRipple (click)="navigateTo('work')">Work</button>
-  <button class="button" mat-button disableRipple (click)="navigateTo('blog')">Blog</button>
-  <button class="button" mat-button disableRipple (click)="navigateTo('about')">About</button>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="example-spacer"></span>
+    <a  class="header-brand" color="accent" mat-button>JAVLON</a>
+    <span class="example-spacer"></span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <span class="example-spacer"></span>
+    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('')">Home</a>
+    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('work')">Work</a>
+
+    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('blog')">Blog</a>
+    <a class="gn-font-size" color="accent" mat-button disableRipple (click)="navigateTo('about')">About</a>
+    <span class="example-spacer"></span>
+  </mat-toolbar-row>
 </mat-toolbar>

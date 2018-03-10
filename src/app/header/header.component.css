@@ -1,11 +1,16 @@
-.example-icon {
-    padding: 0 14px;
-}
-
 .example-spacer {
-    flex: 1 1 auto;
+    flex: 6 auto;
 }
 
-.mat-toolbar {
-    background-color: #233237;
+a {
+    line-height: 1em;
+    display: inline-block;
+    /*text-decoration: none;*/
+    margin: 42px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.gn-font-size {
+    font-size: 18px;
 }
