@@ -1,28 +1,92 @@
-.example-spacer {
-    flex: 6 auto;
+.flex-container {
+    color: white;
+    align-items: center;
+    display: flex;
 }
 
-mat-toolbar a {
-    font-size: 15px;
+.icon > p {
+    display: inline-flex;
 }
 
-mat-toolbar a:hover {
-    font-weight: normal;
-    color: red;
+.nav {
+    display: flex;
+    margin-left: auto;
 }
 
-mat-toolbar a:active {
-    font-weight: bold;
-    color: red;
+@media all and (max-width: 900px) {
+    .flex-container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .flex-container .icon {
+        flex: 1 1 100%;
+    }
+
+    .flex-container .nav {
+        justify-content: space-between;
+        flex: 1 1 100%;
+    }
+
+    .flex-container .nav > a {
+        padding: 5px
+    }
+
+    .header-brand {
+        font-size: 15px;
+    }
 }
 
-/* used to remove the highlight from mat-button */
-mat-toolbar a:hover /deep/ .mat-button-focus-overlay {
-    background-color: transparent;
+@media all and (max-width: 550px) {
+    .flex-container {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .flex-container .icon {
+        flex: 1 1 100%;
+    }
+
+    .flex-container .nav {
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+    }
+
+    .flex-container .nav > a {
+        padding: 5px;
+        flex: 1 1 50%;
+    }
+
+    .header-brand {
+        font-size: 8px;
+    }
 }
 
 .header-brand {
     font-weight: 900;
     font-size: 23px;
     letter-spacing: 4px;
+}
+
+
+.nav a {
+    font-size: 15px;
+    padding: 16px;
+}
+
+
+.nav a:hover {
+    font-weight: normal;
+    color: red;
+    transform: scale(1.1)
+}
+
+.nav a:active {
+    font-weight: bold;
+    color: red;
+}
+
+/* used to remove the highlight from mat-button */
+.nav a:hover /deep/ .mat-button-focus-overlay {
+    background-color: transparent;
 }

@@ -1,9 +1,17 @@
-<mat-toolbar color="primary">
-  <p class="header-brand">JAVLON</p><p class="header-brand" style="padding: 3px; color: red">|</p><p class="header-brand">USMANOV</p>
-  <span class="example-spacer"></span>
-  <a color="accent" mat-button disableRipple (click)="navigateTo('')">HOME</a>
-  <a color="accent" mat-button disableRipple (click)="navigateTo('work')">WORK</a>
+<div class="container">
+    <div class="flex-container">
+        <div class="icon">
+            <p class="header-brand">JAVLON</p>
+            <p class="header-brand" style="padding: 3px; color: red">|</p>
+            <p class="header-brand">USMANOV</p>
+        </div>
 
-  <a color="accent" mat-button disableRipple (click)="navigateTo('blog')">BLOG</a>
-  <a color="accent" mat-button disableRipple (click)="navigateTo('about')">ABOUT</a>
-</mat-toolbar>
+        <div class="nav">
+            <a mat-button disableRipple (click)="navigateTo('')">HOME</a>
+            <a mat-button disableRipple (click)="navigateTo('work')">WORK</a>
+            <a mat-button disableRipple (click)="navigateTo('blog')">BLOG</a>
+            <a mat-button disableRipple (click)="navigateTo('about')">ABOUT</a>
+        </div>
+    </div>
+
+</div>
