@@ -12,6 +12,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { FooterContentComponent } from './footer-content/footer-content.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 const routes: Routes = [
@@ -37,7 +38,8 @@ const routes: Routes = [
         BrowserModule,
         MaterialModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot(routes)
+        RouterModule.forRoot(routes),
+        HttpClientModule
     ],
     providers: [],
     bootstrap: [AppComponent]
