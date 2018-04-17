@@ -4,12 +4,14 @@ import {
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule,
     MatCardModule,
+    MatDividerModule,
     MatGridList,
+    MatInputModule,
     MatGridListModule
 } from '@angular/material';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
     imports: [
@@ -19,7 +21,8 @@ import {MatDividerModule} from '@angular/material/divider';
         MatIconModule,
         MatCardModule,
         MatGridListModule,
-        MatDividerModule
+        MatDividerModule,
+        MatInputModule
     ],
     exports: [
         MatButtonModule,
@@ -28,7 +31,8 @@ import {MatDividerModule} from '@angular/material/divider';
         MatIconModule,
         MatCardModule,
         MatGridListModule,
-        MatDividerModule
+        MatDividerModule,
+        MatInputModule
     ]
 })
 export class MaterialModule {
