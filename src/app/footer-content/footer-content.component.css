@@ -4,10 +4,9 @@ mat-icon {
     height: 24px;
 }
 
-.flex-container {
+.footer-flex-container {
     padding-top: 15px;
     padding-bottom: 15px;
-    color: white;
     justify-content: space-evenly;
     display: flex;
 }
@@ -28,12 +27,12 @@ mat-icon:hover {
 
 
 @media all and (max-width: 400px) {
-    .flex-container {
+    .footer-flex-container {
         flex-wrap: wrap;
         justify-content: space-around;
     }
 
-    .flex-container > div {
+    .footer-flex-container > div {
         flex: 1 1 100%;
     }
 }

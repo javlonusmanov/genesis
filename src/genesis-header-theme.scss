@@ -1,0 +1,21 @@
+@mixin genesis-header-theme($theme) {
+
+  //$primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  //$background: map-get($theme, background);
+  //$foreground: map-get($theme, foreground);
+
+  .nav a:hover {
+    color: mat-color($warn);
+  }
+
+  .nav a:active {
+    color: mat-color($warn);
+  }
+
+  .header-flex-container {
+    color: mat-color($accent);
+  }
+
+}

@@ -1,26 +1,28 @@
 @import '~@angular/material/theming';
 
 @include mat-core();
+@import 'genesis-header-theme.scss';
+@import 'genesis-footer-theme.scss';
 
-$md-primary: (
-        50 : #858585,
-        100 : #5e5e5e,
-        200 : #424242,
-        300 : #1f1f1f,
-        400 : #0f0f0f,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #000000,
-        A100 : #a65959,
-        A200 : #633636,
-        A400 : #1d1616,
-        A700 : #0d0c0c,
+$md-primarypalette: (
+        50 : #afd6f9,
+        100 : #68b1f4,
+        200 : #3497f0,
+        300 : #0f73cd,
+        400 : #0d63b0,
+        500 : #0b5394,
+        600 : #094377,
+        700 : #07335b,
+        800 : #05233f,
+        900 : #031322,
+        A100 : #9fd1ff,
+        A200 : #39a1ff,
+        A400 : #006ed2,
+        A700 : #0861b0,
         contrast: (
                 50 : #000000,
-                100 : #ffffff,
-                200 : #ffffff,
+                100 : #000000,
+                200 : #000000,
                 300 : #ffffff,
                 400 : #ffffff,
                 500 : #ffffff,
@@ -28,39 +30,39 @@ $md-primary: (
                 700 : #ffffff,
                 800 : #ffffff,
                 900 : #ffffff,
-                A100 : #ffffff,
-                A200 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
                 A400 : #ffffff,
                 A700 : #ffffff,
         )
 );
 
-$md-accent: (
-        50 : #ffffff,
-        100 : #ffffff,
-        200 : #ffffff,
-        300 : #ffffff,
-        400 : #ffffff,
-        500 : #ffffff,
-        600 : #f0f0f0,
-        700 : #e0e0e0,
-        800 : #d1d1d1,
-        900 : #c2c2c2,
-        A100 : #ffffff,
-        A200 : #ffffff,
-        A400 : #ffffff,
-        A700 : #ffffff,
+$md-accentpalette: (
+        50 : #def7f5,
+        100 : #def7f5,
+        200 : #def7f5,
+        300 : #def7f5,
+        400 : #def7f5,
+        500 : #def7f5,
+        600 : #def7f5,
+        700 : #def7f5,
+        800 : #def7f5,
+        900 : #def7f5,
+        A100 : #cefdf9,
+        A200 : #6cf9ec,
+        A400 : #1ce3d0,
+        A700 : #25c0b2,
         contrast: (
                 50 : #000000,
                 100 : #000000,
                 200 : #000000,
                 300 : #000000,
                 400 : #000000,
-                500 : #000000,
-                600 : #000000,
-                700 : #000000,
-                800 : #000000,
-                900 : #000000,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
                 A100 : #000000,
                 A200 : #000000,
                 A400 : #000000,
@@ -68,15 +70,62 @@ $md-accent: (
         )
 );
 
-$genesis-app-primary: mat-palette($md-primary);
-$genesis-app-accent: mat-palette($md-accent);
 
-$genesis-app-theme: mat-light-theme($genesis-app-primary, $genesis-app-accent);
-$genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accent);
+$md-warnpalette: (
+        50 : #ffd6d6,
+        100 : #ff8a8a,
+        200 : #ff5252,
+        300 : #ff0a0a,
+        400 : #eb0000,
+        500 : #cc0000,
+        600 : #ad0000,
+        700 : #8f0000,
+        800 : #700000,
+        900 : #520000,
+        A100 : #ffcccc,
+        A200 : #ff6666,
+        A400 : #ff0000,
+        A700 : #e60000,
+        contrast: (
+                50 : #000000,
+                100 : #000000,
+                200 : #000000,
+                300 : #ffffff,
+                400 : #ffffff,
+                500 : #ffffff,
+                600 : #ffffff,
+                700 : #ffffff,
+                800 : #ffffff,
+                900 : #ffffff,
+                A100 : #000000,
+                A200 : #000000,
+                A400 : #ffffff,
+                A700 : #ffffff
+        )
+);
 
 @mixin custom-theme($theme) {
-  @include mat-core-theme($theme);
+        @include genesis-header-theme($theme);
+        @include genesis-footer-theme($theme);
+
 }
 
-@include angular-material-theme($genesis-dark-app-theme);
-@include custom-theme($genesis-dark-app-theme);
+$genesis-app-primary: mat-palette($md-primarypalette);
+$genesis-app-accent: mat-palette($md-accentpalette);
+$genesis-app-warn: mat-palette($md-warnpalette);
+
+$genesis-app-theme: mat-light-theme($genesis-app-primary, $genesis-app-accent, $genesis-app-warn);
+$genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accent, $genesis-app-warn);
+
+@include angular-material-theme($genesis-app-theme);
+@include custom-theme($genesis-app-theme);
+
+.mat-app-background, .header, .footer {
+        background-color: black;
+}
+
+
+
+
+
+

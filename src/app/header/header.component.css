@@ -1,5 +1,4 @@
-.flex-container {
-    color: white;
+.header-flex-container {
     align-items: center;
     display: flex;
 }
@@ -14,21 +13,21 @@
 }
 
 @media all and (max-width: 900px) {
-    .flex-container {
+    .header-flex-container {
         flex-wrap: wrap;
         text-align: center;
     }
 
-    .flex-container .icon {
+    .header-flex-container .icon {
         flex: 1 1 100%;
     }
 
-    .flex-container .nav {
+    .header-flex-container .nav {
         justify-content: space-between;
         flex: 1 1 100%;
     }
 
-    .flex-container .nav > a {
+    .header-flex-container .nav > a {
         padding: 5px
     }
 
@@ -38,21 +37,21 @@
 }
 
 @media all and (max-width: 550px) {
-    .flex-container {
+    .header-flex-container {
         flex-wrap: wrap;
         text-align: center;
     }
 
-    .flex-container .icon {
+    .header-flex-container .icon {
         flex: 1 1 100%;
     }
 
-    .flex-container .nav {
+    .header-flex-container .nav {
         flex-wrap: wrap;
         flex: 1 1 100%;
     }
 
-    .flex-container .nav > a {
+    .header-flex-container .nav > a {
         padding: 5px;
         flex: 1 1 50%;
     }
@@ -77,13 +76,11 @@
 
 .nav a:hover {
     font-weight: normal;
-    color: red;
     transform: scale(1.1)
 }
 
 .nav a:active {
     font-weight: bold;
-    color: red;
 }
 
 /* used to remove the highlight from mat-button */
