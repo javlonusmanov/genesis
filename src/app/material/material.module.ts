@@ -8,7 +8,9 @@ import {
     MatDividerModule,
     MatGridList,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSidenavModule,
+    MatExpansionModule
 } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -22,7 +24,9 @@ import { MatIconModule } from '@angular/material/icon';
         MatCardModule,
         MatGridListModule,
         MatDividerModule,
-        MatInputModule
+        MatInputModule,
+        MatSidenavModule,
+        MatExpansionModule
     ],
     exports: [
         MatButtonModule,
@@ -32,7 +36,9 @@ import { MatIconModule } from '@angular/material/icon';
         MatCardModule,
         MatGridListModule,
         MatDividerModule,
-        MatInputModule
+        MatInputModule,
+        MatSidenavModule,
+        MatExpansionModule
     ]
 })
 export class MaterialModule {
