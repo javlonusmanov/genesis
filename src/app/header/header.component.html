@@ -1,17 +1,10 @@
-<div class="container">
-    <div class="header-flex-container">
-        <div class="icon">
-            <p class="header-brand">JAVLON</p>
-            <p class="header-brand" style="padding: 3px; color: red">|</p>
-            <p class="header-brand">USMANOV</p>
-        </div>
-
-        <div class="nav">
-            <a mat-button disableRipple (click)="navigateTo('')">HOME</a>
-            <a mat-button disableRipple (click)="navigateTo('work')">WORK</a>
-            <a mat-button disableRipple (click)="navigateTo('blog')">BLOG</a>
-            <a mat-button disableRipple (click)="navigateTo('about')">ABOUT</a>
-        </div>
-    </div>
-
-</div>
+<header class="gns-header bottom">
+    <h1 href="/" class="logo">JAVLON | USMANOV</h1>
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        <li><a href="#work">WORK</a></li>
+        <li><a href="#blog">BLOG</a></li>
+        <li><a href="#aboutme">ABOUT</a></li>
+    </ul>
+</header>

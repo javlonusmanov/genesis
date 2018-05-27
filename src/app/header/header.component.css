@@ -1,89 +1,137 @@
-.header-flex-container {
-    align-items: center;
-    display: flex;
+.gns-header {
+  background-color: whitesmoke;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  /*z-index: 999;*/
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  height: 70px;
+  box-shadow: 0 6px 6px -6px #111;
 }
 
-.icon > p {
-    display: inline-flex;
+.gns-header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: whitesmoke;
 }
 
-.nav {
-    display: flex;
-    margin-left: auto;
+.gns-header li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  font-size: 18px;
 }
 
-@media all and (max-width: 900px) {
-    .header-flex-container {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .header-flex-container .icon {
-        flex: 1 1 100%;
-    }
-
-    .header-flex-container .nav {
-        justify-content: space-between;
-        flex: 1 1 100%;
-    }
-
-    .header-flex-container .nav > a {
-        padding: 5px
-    }
-
-    .header-brand {
-        font-size: 15px;
-    }
+.gns-header li a:hover,
+.gns-header .menu-btn:hover {
+  color: red;
+  background-color: #f4f4f4;
 }
 
-@media all and (max-width: 550px) {
-    .header-flex-container {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .header-flex-container .icon {
-        flex: 1 1 100%;
-    }
-
-    .header-flex-container .nav {
-        flex-wrap: wrap;
-        flex: 1 1 100%;
-    }
-
-    .header-flex-container .nav > a {
-        padding: 5px;
-        flex: 1 1 50%;
-    }
-
-    .header-brand {
-        font-size: 8px;
-    }
+.gns-header .logo {
+  font-size: 23px;
+  text-decoration: none;
+  padding-left: 30px
 }
 
-.header-brand {
-    font-weight: 900;
-    font-size: 23px;
-    letter-spacing: 4px;
+/* menu */
+
+.gns-header .menu {
+  align-items: center;
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  justify-content: space-around;
+  margin-left: auto;
+  max-height: 0;
+  transition: max-height .2s ease-out;
 }
 
-
-.nav a {
-    font-size: 15px;
-    padding: 16px;
+/* menu icon */
+.gns-header .menu-icon {
+  margin-left: auto;
+  cursor: pointer;
+  display: inline-block;
+  padding: 32px 30px 32px 20px;
 }
 
-
-.nav a:hover {
-    font-weight: normal;
-    transform: scale(1.1)
+.gns-header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 3px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
 }
 
-.nav a:active {
-    font-weight: bold;
+.gns-header .menu-icon .navicon:before,
+.gns-header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
 }
 
-/* used to remove the highlight from mat-button */
-.nav a:hover /deep/ .mat-button-focus-overlay {
-    background-color: transparent;
+.gns-header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.gns-header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+.gns-header .menu-btn {
+  padding: 20px 20px;
+  display: none;
+}
+
+.gns-header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.gns-header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.gns-header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.gns-header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.gns-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.gns-header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 768px) {
+  .gns-header .logo {
+    padding-left: 30px;
+  }
+
+  .gns-header .menu {
+    padding-right: 20px;
+    flex-direction: row;
+    flex: 0 1 35%;
+    clear: none;
+    max-height: none;
+  }
+
+  .gns-header .menu-icon {
+    display: none;
+  }
 }

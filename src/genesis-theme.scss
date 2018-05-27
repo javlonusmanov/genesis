@@ -70,7 +70,6 @@ $md-accentpalette: (
         )
 );
 
-
 $md-warnpalette: (
         50 : #ffd6d6,
         100 : #ff8a8a,
@@ -105,8 +104,8 @@ $md-warnpalette: (
 );
 
 @mixin custom-theme($theme) {
-        @include genesis-header-theme($theme);
-        @include genesis-footer-theme($theme);
+  @include genesis-header-theme($theme);
+  @include genesis-footer-theme($theme);
 
 }
 
@@ -120,10 +119,17 @@ $genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accen
 @include angular-material-theme($genesis-app-theme);
 @include custom-theme($genesis-app-theme);
 
-.mat-app-background, .header, .footer {
-        background-color: black;
+.mat-app-background, .header, .footer .gns-background {
+  background-color: whitesmoke;
 }
 
+a {
+  color: black;
+}
+
+h1 {
+  color: black;
+}
 
 
 
