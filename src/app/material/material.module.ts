@@ -6,7 +6,6 @@ import {
     MatToolbarModule,
     MatCardModule,
     MatDividerModule,
-    MatGridList,
     MatInputModule,
     MatGridListModule,
     MatSidenavModule,
