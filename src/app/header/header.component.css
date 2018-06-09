@@ -1,9 +1,8 @@
 .gns-header {
-  background-color: whitesmoke;
+  background-color: black;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
-  /*z-index: 999;*/
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -17,7 +16,7 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: whitesmoke;
+  background-color: black;
 }
 
 .gns-header li a {
@@ -27,13 +26,18 @@
   font-size: 18px;
 }
 
+a {
+  color: white;
+}
+
 .gns-header li a:hover,
 .gns-header .menu-btn:hover {
   color: red;
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
 }
 
 .gns-header .logo {
+  width: fit-content;
   font-size: 23px;
   text-decoration: none;
   padding-left: 30px
@@ -47,9 +51,8 @@
   display: flex;
   flex-direction: column;
   flex: 0 0 100%;
-  justify-content: space-around;
+  /*justify-content: flex-end;*/
   margin-left: auto;
-  max-height: 0;
   transition: max-height .2s ease-out;
 }
 
@@ -62,7 +65,7 @@
 }
 
 .gns-header .menu-icon .navicon {
-  background: #333;
+  background: whitesmoke;
   display: block;
   height: 3px;
   position: relative;
@@ -72,7 +75,7 @@
 
 .gns-header .menu-icon .navicon:before,
 .gns-header .menu-icon .navicon:after {
-  background: #333;
+  background: whitesmoke;
   content: '';
   display: block;
   height: 100%;
@@ -95,8 +98,12 @@
   display: none;
 }
 
-.gns-header .menu-btn:checked ~ .menu {
+.open {
   max-height: 240px;
+}
+
+.close {
+  max-height: 0px;
 }
 
 .gns-header .menu-btn:checked ~ .menu-icon .navicon {
@@ -116,22 +123,28 @@
   top: 0;
 }
 
-/* 48em = 768px */
-
-@media (min-width: 768px) {
-  .gns-header .logo {
-    padding-left: 30px;
-  }
-
+@media (min-width: 850px) {
   .gns-header .menu {
-    padding-right: 20px;
+    padding-right: 7%;
     flex-direction: row;
-    flex: 0 1 35%;
+    flex: 0 0 30%;
     clear: none;
     max-height: none;
   }
 
   .gns-header .menu-icon {
     display: none;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1200px) {
+  .gns-header .logo {
+    padding-left: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gns-header .logo {
+    padding-left: 22%;
   }
 }
