@@ -1,3 +1,10 @@
 h1 {
     font-size: 40px;
+    color: white;
+}
+
+.content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-image: url('assets/subtle_carbon.png');
 }
