@@ -1,38 +1,135 @@
-mat-icon {
-    width: 24px;
-    padding: 15px;
-    height: 24px;
-}
-
 .footer-flex-container {
     padding-top: 15px;
     padding-bottom: 15px;
-    justify-content: space-evenly;
+    text-align: center;
     display: flex;
+    justify-content: center;
 }
 
-.socialInfo {
+.mat-button {
+    font-size: 17px;
+    padding: 5px;
+    margin-top: 20px;
+    min-width: 200px;
+    border-radius: 20px;
+}
+
+.mat-button:hover {
+    background-color: grey;
+}
+
+.example-container {
     display: flex;
-    justify-content: space-around;
-    margin-left: auto;
+    flex-direction: column;
+    align-items: center;
 }
 
-mat-icon:hover {
-    transform: scale(1.1);
+.example-container > mat-form-field {
+    width: 100%;
+    max-width: 90%;
 }
 
-/deep/ .mat-input-underline {
-    background-color: lightgray;
+.content {
+    background-color: transparent;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    width: 100px;
+}
 
-@media all and (max-width: 400px) {
+.c-icon {
+    width:  36px;
+    height: 36px;
+    fill: currentColor;
+    transition: .2s;
+}
+
+.c-link:hover { color: #000 }
+.c-link:hover::after { background: #000 }
+
+.c-link {
+    position: relative;
+    color: #bbb;
+}
+
+.c-link:not(:last-of-type) {
+    margin-right: 15px;
+}
+
+.c-tooltip::before,
+.c-tooltip::after {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    opacity: 0;
+    transition: .2s;
+}
+
+.c-tooltip::before {
+    content: '';
+    bottom: calc(100% + 2px);
+    border: solid 5px transparent;
+    border-top-color: currentColor;
+}
+
+.c-tooltip::after {
+    content: attr(aria-label);
+    bottom: calc(100% + 12px);
+    padding: .61em .93em;
+    font-size: .875rem;
+    color: white;
+    border-radius: 3px;
+}
+
+.c-tooltip:hover::before,
+.c-tooltip:hover::after {
+    opacity: 1;
+    transform: translate(-50%);
+}
+
+.pens-link-container {
+    flex-basis: 100%;
+    font-size: .9rem;
+    text-align: center;
+}
+
+.pens-link {
+    margin-bottom: 0;
+    background: white;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .1);
+    border: none;
+}
+
+@media (min-width: 1200px) {
     .footer-flex-container {
         flex-wrap: wrap;
-        justify-content: space-around;
     }
 
     .footer-flex-container > div {
-        flex: 1 1 100%;
+        flex: 0 0 100%;
+    }
+
+    .example-container > mat-form-field {
+        width: 100%;
+        max-width: 25%;
+        font-size: 15px;
+    }
+
+    .mat-button {
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 850px) and (max-width:1200px) {
+    .example-container > mat-form-field {
+        width: 100%;
+        max-width: 35%;
     }
 }
