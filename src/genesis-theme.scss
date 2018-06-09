@@ -15,10 +15,10 @@ $md-primarypalette: (
         700 : #07335b,
         800 : #05233f,
         900 : #031322,
-        A100 : #9fd1ff,
-        A200 : #39a1ff,
-        A400 : #006ed2,
-        A700 : #0861b0,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
         contrast: (
                 50 : #000000,
                 100 : #000000,
@@ -48,10 +48,10 @@ $md-accentpalette: (
         700 : #def7f5,
         800 : #def7f5,
         900 : #def7f5,
-        A100 : #cefdf9,
-        A200 : #6cf9ec,
-        A400 : #1ce3d0,
-        A700 : #25c0b2,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
         contrast: (
                 50 : #000000,
                 100 : #000000,
@@ -123,12 +123,9 @@ $genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accen
   background-color: whitesmoke;
 }
 
-a {
-  color: black;
-}
-
-h1 {
-  color: black;
+.gns-dark-bg {
+  background-color: black;
+  color: whitesmoke;
 }
 
 
