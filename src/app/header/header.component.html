@@ -1,8 +1,18 @@
-<header class="gns-header bottom">
-    <a href="/" class="logo">JAVLON | USMANOV</a>
-    <input class="menu-btn" (click)="toggle()" type="checkbox" id="menu-btn"/>
+<header class="gns-header bottom gns-dark-bg">
+    <a href="/" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 374.91 244">
+            <path class="cls-1"
+                  d="M151.56,46.21,107.77,154.52c-26.4,68.75-96,68.75-96,68.75H9.4a2,2,0,0,1-2.2-2.62l14.54-37.87A4.73,4.73,0,0,1,26,180.16H28.3c25.34,0,35.19-25.64,35.19-25.64L107.28,46.21Z"/>
+            <path class="cls-1" d="M165.87,8.92l-14.3,37.29H35.76L7.09,6.3H164C166,6.3,166.32,7.75,165.87,8.92Z"/>
+            <path class="cls-1"
+                  d="M374.91,49.71,302.09,237.9c-.88,2-4.37,2-5.54,0L208.86,9.8c-.87-1.75.3-3.5,2.63-3.5h39.62c1.45,0,2.62.58,2.91,1.75l45.44,127,30.59-85.35Z"/>
+            <path class="cls-1"
+                  d="M110.84,196,183.67,7.83c.87-2,4.37-2,5.53,0l87.69,228.1c.87,1.75-.29,3.49-2.62,3.49H234.65c-1.46,0-2.62-.58-2.92-1.74l-45.44-127L155.7,196Z"/>
+        </svg>
+    </a>
+    <input [(ngModel)]="checkboxFlag" (click)="toggle()" class="menu-btn" id="menu-btn" type="checkbox"/>
     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-    <ul class="menu" (click)="toggle()" [ngClass]="{ 'open': toggleMenu, 'close': !toggleMenu }">
+    <ul class="menu gns-dark-bg" (click)="toggle()" [ngClass]="{ 'open': checkboxFlag, 'close': !checkboxFlag }">
         <li><a href="#work">WORK</a></li>
         <li><a href="#blog">BLOG</a></li>
         <li><a href="#aboutme">ABOUT</a></li>

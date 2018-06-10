@@ -1,5 +1,4 @@
 .gns-header {
-  background-color: black;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
@@ -16,7 +15,6 @@
   padding: 0;
   list-style: none;
   overflow: hidden;
-  background-color: black;
 }
 
 .gns-header li a {
@@ -26,14 +24,9 @@
   font-size: 18px;
 }
 
-a {
-  color: white;
-}
-
 .gns-header li a:hover,
 .gns-header .menu-btn:hover {
   color: red;
-  /*background-color: #f4f4f4;*/
 }
 
 .gns-header .logo {
@@ -71,6 +64,16 @@ a {
   position: relative;
   transition: background .2s ease-out;
   width: 18px;
+}
+
+svg {
+  fill: white;
+  height: 60px;
+  width: 60px;
+}
+
+svg:hover {
+  fill: crimson;
 }
 
 .gns-header .menu-icon .navicon:before,
@@ -146,5 +149,14 @@ a {
 @media (min-width: 1200px) {
   .gns-header .logo {
     padding-left: 22%;
+  }
+
+  .gns-header {
+    height: 80px;
+  }
+
+  svg {
+    height: 80px;
+    width: 80px;
   }
 }

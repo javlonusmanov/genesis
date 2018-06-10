@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
     selector: 'app-header',
@@ -8,22 +8,18 @@ import { Component, ElementRef, OnInit } from '@angular/core';
         '(document:click)': 'toggleFromOutside()',
     },
 })
-export class HeaderComponent implements OnInit {
-    private toggleMenu: boolean = false;
+export class HeaderComponent {
+    checkboxFlag: boolean = false;
 
-    constructor(private eRef: ElementRef) {
-    }
-
-    ngOnInit(): void {
-    }
+    constructor(private eRef: ElementRef) {}
 
     toggle() {
-        this.toggleMenu = !this.toggleMenu;
+        this.checkboxFlag = !this.checkboxFlag;
     }
 
     toggleFromOutside() {
         if(!this.eRef.nativeElement.contains(event.target)) {
-            if(this.toggleMenu) {
+            if(this.checkboxFlag) {
                 this.toggle()
             }
         }
