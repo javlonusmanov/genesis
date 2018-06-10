@@ -13,7 +13,7 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { FooterContentComponent } from './footer-content/footer-content.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { FormsModule } from '@angular/forms'
 
 const routes: Routes = [
     { path: '', component: HomePageComponent },
@@ -35,11 +35,12 @@ const routes: Routes = [
         FooterContentComponent
     ],
     imports: [
-        BrowserModule,
-        MaterialModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot(routes),
-        HttpClientModule
+        BrowserModule,
+        FormsModule,
+        HttpClientModule,
+        MaterialModule,
+        RouterModule.forRoot(routes)
     ],
     providers: [],
     bootstrap: [AppComponent]
