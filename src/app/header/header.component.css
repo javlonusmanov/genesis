@@ -6,7 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  height: 70px;
+  justify-content: center;
+  height: 69px;
   box-shadow: 0 6px 6px -6px #111;
 }
 
@@ -22,6 +23,7 @@
   padding: 20px;
   text-decoration: none;
   font-size: 18px;
+  font-weight: bold;
 }
 
 .gns-header li a:hover,
@@ -44,7 +46,6 @@
   display: flex;
   flex-direction: column;
   flex: 0 0 100%;
-  /*justify-content: flex-end;*/
   margin-left: auto;
   transition: max-height .2s ease-out;
 }
@@ -58,7 +59,7 @@
 }
 
 .gns-header .menu-icon .navicon {
-  background: whitesmoke;
+  background: black;
   display: block;
   height: 3px;
   position: relative;
@@ -67,20 +68,20 @@
 }
 
 svg {
-  fill: white;
+  fill: black;
+  stroke: black;
   height: 60px;
   width: 60px;
-  stroke: white;
 }
 
 svg:hover {
-  fill: crimson;
-  stroke: crimson;
+  fill: darkgray;
+  stroke: darkgray;
 }
 
 .gns-header .menu-icon .navicon:before,
 .gns-header .menu-icon .navicon:after {
-  background: whitesmoke;
+  background: black;
   content: '';
   display: block;
   height: 100%;
@@ -158,7 +159,7 @@ svg:hover {
   }
 
   svg {
-    height: 80px;
-    width: 80px;
+    height: 70px;
+    width: 70px;
   }
 }
