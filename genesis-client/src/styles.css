@@ -40,9 +40,3 @@ hr.divider {
     margin: 0em;
     border-width: 1px;
 }
-
-@media (min-width: 1200px) {
-    body {
-        margin-top: 80px;
-    }
-}

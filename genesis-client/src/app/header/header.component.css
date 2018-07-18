@@ -153,13 +153,4 @@ svg:hover {
   .gns-header .logo {
     padding-left: 22%;
   }
-
-  .gns-header {
-    height: 80px;
-  }
-
-  svg {
-    height: 70px;
-    width: 70px;
-  }
 }
