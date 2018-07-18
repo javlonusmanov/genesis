@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  angular:
+    build: genesis-client
+    ports:
+      - "4200:4200"
+  express:
+    build: genesis-server
+    ports:
+      - "3000:3000"
