@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-.example-container > mat-form-field {
+.example-container > form > mat-form-field {
     width: 100%;
     max-width: 90%;
 }

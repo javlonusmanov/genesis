@@ -8,7 +8,7 @@ COPY package.json /usr/src/app
 
 RUN npm install
 
-COPY . /usr/src/app
+COPY genesis-client /usr/src/app
 
 # Expose the port the app runs in
 EXPOSE 4200

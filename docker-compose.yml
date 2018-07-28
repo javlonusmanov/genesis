@@ -9,3 +9,10 @@ services:
     build: genesis-server
     ports:
       - "3000:3000"
+    links:
+          - database
+  database:
+      image: mongo
+      restart: always
+      ports:
+        - "37017:27017"

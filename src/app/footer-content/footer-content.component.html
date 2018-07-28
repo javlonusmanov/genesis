@@ -5,21 +5,23 @@
             Let's work together!
         </h3>
         <div class="example-container">
-            <mat-form-field>
-                <input matInput placeholder="Name">
-            </mat-form-field>
+            <form #messageForm="ngForm" (ngSubmit)="onSend(messageForm)">
+                <mat-form-field class="form-group">
+                    <input [(ngModel)]="name" name="name" autocomplete='name' class="form-control" matInput placeholder="Name">
+                </mat-form-field>
 
-            <mat-form-field>
-                <input matInput placeholder="Email">
-            </mat-form-field>
+                <mat-form-field class="form-group">
+                    <input [(ngModel)]="email" name="email" autocomplete='email' class="form-control" matInput placeholder="Email">
+                </mat-form-field>
 
-            <mat-form-field>
-                <textarea matInput placeholder="Message" cdkTextareaAutosize
+                <mat-form-field class="form-group">
+                <textarea [(ngModel)]="message" name="message" class="form-control" matInput placeholder="Message" cdkTextareaAutosize
                           cdkAutosizeMinRows="2"
                           cdkAutosizeMaxRows="10"></textarea>
-            </mat-form-field>
+                </mat-form-field>
 
-            <button class="gns-dark-bg" disableripple mat-button>Submit</button>
+                <button class="gns-dark-bg" type="submit" disableripple mat-button>SEND</button>
+            </form>
         </div>
     </section>
 </div>
