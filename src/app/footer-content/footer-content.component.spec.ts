@@ -1,8 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { FooterContentComponent } from './footer-content.component';
+import { FooterContentComponent } from "./footer-content.component";
 
-describe('FooterContentComponent', () => {
+describe("FooterContentComponent", () => {
   let component: FooterContentComponent;
   let fixture: ComponentFixture<FooterContentComponent>;
 
@@ -19,7 +19,7 @@ describe('FooterContentComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
