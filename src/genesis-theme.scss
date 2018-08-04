@@ -123,6 +123,11 @@ $genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accen
   background-color: whitesmoke;
 }
 
+//TODO: investigate why this class takes precedences over other classes
+.mat-drawer-container {
+        background-color: whitesmoke
+}
+
 .gns-dark-bg {
    background-color: black;
    color: white;

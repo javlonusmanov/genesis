@@ -1,12 +1,24 @@
-<app-header></app-header>
+<mat-sidenav-container
+        class="example-container" (backdropClick)="close()">
+    <mat-sidenav #sidenav (keydown.escape)="close()" disableClose>
+        <p>
+            <button mat-button (click)="close()">Toggle</button>
+        </p>
+    </mat-sidenav>
 
-<app-home-page></app-home-page>
-<!--<app-work-page></app-work-page>-->
-<!--<app-blog-page></app-blog-page>-->
-<!--<app-about-page></app-about-page>-->
+    <mat-sidenav-content>
+        <app-header (sideNavEvent)="sidenav.opened ? sidenav.close() : sidenav.open()"></app-header>
 
-<hr class="divider">
+        <app-home-page></app-home-page>
+        <!--<app-work-page></app-work-page>-->
+        <!--<app-blog-page></app-blog-page>-->
+        <!--<app-about-page></app-about-page>-->
 
-<div class="footer">
-    <app-footer></app-footer>
-</div>
+        <hr class="divider">
+
+        <div class="footer">
+            <app-footer></app-footer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

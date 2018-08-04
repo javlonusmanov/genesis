@@ -20,6 +20,8 @@ import { NgModule } from "@angular/core";
 import { PersonalSummaryComponent } from "./personal-summary/personal-summary.component";
 import { RouterModule, Routes } from "@angular/router";
 import { WorkPageComponent } from "./work-page/work-page.component";
+import { HeaderService } from "./header/header.service";
+import { WindowService } from "./utility-services/window.service";
 
 const routes: Routes = [
     { path: "", component: HomePageComponent },
@@ -58,7 +60,10 @@ const routes: Routes = [
         ReactiveFormsModule,
         RouterModule.forRoot(routes)
     ],
-    providers: [],
+    providers: [
+        HeaderService,
+        WindowService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
