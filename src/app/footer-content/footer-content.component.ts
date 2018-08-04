@@ -17,6 +17,9 @@ export class Message {
     styleUrls: ["./footer-content.component.css"]
 })
 export class FooterContentComponent implements OnInit {
+    @ViewChild("f") myNgForm;
+
+
     private messageForm: FormGroup;
     private messages: Observable<Message[]>;
     private messagesCollection: AngularFirestoreCollection<Message>;
@@ -33,7 +36,7 @@ export class FooterContentComponent implements OnInit {
 
         this.messageForm = this.formBuilder.group({
             name: [null, Validators.required],
-            email: [null, Validators.email],
+            email: [null, [Validators.required, Validators.email]],
             message: [null, Validators.required]
         });
     }
@@ -46,22 +49,18 @@ export class FooterContentComponent implements OnInit {
             created_date: new Date()
         } as Message);
 
-        this.messageForm.reset();
+        this.myNgForm.resetForm();
         this.messageForm.markAsUntouched();
-        Object.keys(this.messageForm.controls).forEach((name) => {
-            const control: AbstractControl = this.messageForm.controls[name];
-            control.setErrors(null);
-        });
 
         this.snackBar.openFromComponent(PizzaPartyComponent, {
-            duration: 700
+            duration: 2000
         });
     }
 }
 
 
 @Component({
-    selector: "snack-bar-component-example-snack",
+    selector: "app-snack-bar-component-example-snack",
     template: `
         <p>Success</p>
     `,

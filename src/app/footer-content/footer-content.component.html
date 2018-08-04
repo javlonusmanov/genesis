@@ -5,7 +5,7 @@
             Let's work together!
         </h3>
         <div class="example-container">
-            <form [formGroup]="messageForm" (ngSubmit)="onSend(messageForm)">
+            <form [formGroup]="messageForm" #f="ngForm" (ngSubmit)="onSend(messageForm)">
                 <mat-form-field class="form-group">
                     <input formControlName="name" class="form-control" matInput placeholder="Name">
                 </mat-form-field>
