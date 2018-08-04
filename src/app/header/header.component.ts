@@ -1,27 +1,16 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output } from "@angular/core";
+import { HeaderService } from "./header.service";
 
 @Component({
-    selector: 'app-header',
-    templateUrl: './header.component.html',
-    styleUrls: ['./header.component.css'],
-    host: {
-        '(document:click)': 'toggleFromOutside()',
-    },
+    selector: "app-header",
+    templateUrl: "./header.component.html",
+    styleUrls: ["./header.component.css"]
 })
 export class HeaderComponent {
-    checkboxFlag: boolean = false;
 
-    constructor(private eRef: ElementRef) {}
+    constructor(private headerService: HeaderService) {}
 
-    toggle() {
-        this.checkboxFlag = !this.checkboxFlag;
-    }
-
-    toggleFromOutside() {
-        if(!this.eRef.nativeElement.contains(event.target)) {
-            if(this.checkboxFlag) {
-                this.toggle()
-            }
-        }
+    openSideNav() {
+        this.headerService.change();
     }
 }
