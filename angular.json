@@ -22,7 +22,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/genesis-theme.scss"
+              "src/genesis-theme.scss",
+              "node_modules/hamburgers/dist/hamburgers.min.css"
             ],
             "scripts": []
           },
