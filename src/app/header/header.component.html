@@ -1,4 +1,4 @@
-<header class="gns-header bottom gns-dark-bg">
+<header class="gns-header bottom gns-dark-bg" [style.background-color] = "scrolled ? 'black' : 'transparent'">
     <div class="hamburger hamburger--collapse test" (click)="openSideNav()" type="button" [ngClass]="{ 'is-active': headerService.isActive | async}">
         <span class="hamburger-box">
           <span class="hamburger-inner"></span>
