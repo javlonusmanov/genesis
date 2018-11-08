@@ -1,17 +1,25 @@
-<div class="content" id="blog">
-    <section class="container">
-        <p>
-            Blogs are coming soon!
-        </p>
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere nisl eget mauris ornare accumsan. Ut quis accumsan sem, a tincidunt turpis. Ut tempor tristique fermentum. Donec non leo lacinia, rutrum massa sed, luctus diam. Nam neque lacus, tempus non erat in, ultricies congue mauris. Duis ac bibendum lacus. Cras sem nisi, vehicula non aliquet mattis, viverra at risus. Cras volutpat eu eros et ornare. Donec mattis elementum elit, id porta nibh fermentum ut. Donec quis semper eros, id condimentum dui. Maecenas pharetra tempor ligula, id sodales est elementum in. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam tristique augue lectus, in tristique ligula pellentesque ut. Phasellus nisl lorem, venenatis porttitor arcu imperdiet, auctor tincidunt elit. Vivamus ac lacus id velit pretium egestas.
-
-        Praesent tellus neque, ullamcorper varius lacinia sed, tempor eget neque. Maecenas sed sapien consectetur sapien rutrum volutpat. Cras auctor sed felis vitae vestibulum. Donec ex nibh, vehicula cursus tempus pulvinar, pellentesque quis elit. Suspendisse lobortis ligula vel lorem semper, a lobortis massa gravida. Etiam eu efficitur elit. Aenean scelerisque lacus eu volutpat pulvinar. Duis sed lorem vel risus aliquet vehicula eu et eros. Aenean feugiat libero massa, at iaculis odio finibus vel. Nunc eu metus facilisis, dictum quam at, commodo purus. Sed viverra sagittis magna eu accumsan. Nunc eget vehicula dui.
-
-        Nulla facilisi. Duis ultricies ex et erat malesuada rhoncus. In laoreet odio id volutpat aliquet. Curabitur vel tempor erat, et vehicula turpis. Donec velit diam, pulvinar quis commodo a, luctus finibus diam. Aliquam risus ligula, dignissim vitae nibh sit amet, tempor finibus sapien. Nam eget lacinia nulla.
-
-        Morbi sodales dapibus quam at sodales. Sed nec viverra lacus, sed vehicula velit. Phasellus ligula massa, vulputate ut nisl at, eleifend posuere est. Etiam condimentum turpis eget venenatis placerat. Vivamus ut dignissim urna. Aliquam rhoncus condimentum elit, a consectetur lacus tristique et. Morbi gravida erat ut eleifend semper. Fusce vitae nisl luctus, bibendum elit eget, feugiat nisi. Nulla euismod tempus gravida. Suspendisse luctus metus sodales lorem pellentesque semper. Nulla luctus ex elit, nec auctor lorem commodo ut. Nam scelerisque turpis in tristique faucibus.
-
-        Pellentesque dignissim urna tortor, quis semper enim ultrices et. Duis luctus sem massa, a iaculis eros tempor vel. Nullam maximus sodales ligula, eget pellentesque tellus finibus vel. Aenean dolor purus, eleifend vel eros sit amet, luctus semper mauris. Duis nec posuere orci, ut luctus orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin quis viverra lectus, pretium sodales nisl. Nunc sollicitudin eleifend sapien vel finibus. Nunc ut fringilla nibh, eu semper quam. Vestibulum aliquam, ex non eleifend lacinia, ipsum dui feugiat diam, sit amet dignissim dui diam id est.
-    </section>
-</div>
+<section class="blog section-padding" data-scroll-index="3">
+    <div class="section-head full-width">
+        <h4 class="title">Recent blogs</h4>
+    </div>
+    <div class="container">
+        <div class="owl-carousel owl-theme">
+            <mat-card *ngFor="let blog of blogs" class="example-card">
+                <mat-card-header>
+                    <h3>
+                        <a href="#0">{{ blog.name }}</a>
+                    </h3>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                        {{blog.content}}
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</section>

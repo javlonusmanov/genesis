@@ -1,0 +1,16 @@
+.gn-sidenav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+}
+
+.gn-sidenav button {
+    padding: 30px 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    font-size: 25px;
+}
+
+.mat-button {
+    width: 100%
+}

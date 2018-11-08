@@ -1,17 +1,33 @@
+$logo-color: whitesmoke;
+$main-color: #C49B66;
+$tablet-sm-screen: 767px;
+$desk-md-screen: 991px;
+$phone-sm-screen: 321px;
+
 .footer-flex-container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
+    padding-top: 50px;
     display: flex;
+    background:  #1C1F24;
     justify-content: center;
 }
 
+/deep/ .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: whitesmoke;
+}
+
+/deep/ .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: whitesmoke;
+    font-size: 15px;
+}
+
+.section-head {
+    margin-bottom: 15px;
+}
+
 .mat-button {
-    font-size: 20px;
-    padding: 5px;
+    color: whitesmoke;
     margin-top: 20px;
-    min-width: 200px;
-    border-radius: 20px;
+    min-width: 150px;
 }
 
 .mat-button:hover {
@@ -19,7 +35,8 @@
 }
 
 .mat-button:disabled {
-    background-color: transparent;
+    background-color: grey;
+    color: black
 }
 
 .example-container {
@@ -33,9 +50,14 @@
     max-width: 90%;
 }
 
+.form-group {
+    margin: 0px;
+}
+
 .content {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
+    background:  #1C1F24;
+    color: whitesmoke;
     text-align: center;
 }
 
@@ -52,12 +74,13 @@ a {
     transition: .2s;
 }
 
-.c-link:hover { color: #000 }
-.c-link:hover::after { background: #000 }
+.c-link:hover { color: whitesmoke }
+.c-link:hover::after { background: whitesmoke; 
+color: black;}
 
 .c-link {
     position: relative;
-    color: #bbb;
+    color: whitesmoke;
 }
 
 .c-link:not(:last-of-type) {
@@ -86,7 +109,7 @@ a {
     bottom: calc(100% + 12px);
     padding: .61em .93em;
     font-size: .875rem;
-    color: white;
+    color: whitesmoke;
     border-radius: 3px;
 }
 
@@ -109,7 +132,8 @@ a {
     border: none;
 }
 
-@media (min-width: 1200px) {
+
+@media (min-width: $desk-md-screen) {
     .footer-flex-container {
         flex-wrap: wrap;
     }
@@ -121,18 +145,19 @@ a {
     .example-container > mat-form-field {
         width: 100%;
         max-width: 25%;
-        font-size: 15px;
-    }
-
-    .mat-button {
-        font-size: 15px;
-        padding: 10px;
     }
 }
 
-@media (min-width: 850px) and (max-width:1200px) {
+@media (min-width: $tablet-sm-screen) and (max-width: $desk-md-screen) {
     .example-container > mat-form-field {
         width: 100%;
         max-width: 35%;
+    }
+}
+
+@media screen and (max-width: $phone-sm-screen){
+    .c-icon {
+        width:  26px;
+        height: 26px;
     }
 }

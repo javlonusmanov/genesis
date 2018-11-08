@@ -1,0 +1,67 @@
+/* ----------------------------------------------------------------
+				07 Services
+-----------------------------------------------------------------*/
+$main-color: whitesmoke;
+$tablet-sm-screen: 769px;
+$desk-md-screen: 991px;
+$phone-sm-screen: 321px;
+
+.services{
+
+	.item{
+		text-align: center;
+		padding: 40px 15px;
+
+		.icon{
+			font-size: 40px;
+			color: black;
+			margin-bottom: 30px;
+		}
+
+		h6{
+			font-size: 22px;
+			margin-bottom: 15px;
+		}
+	}
+
+	.active{
+		border-right: 1px solid lightgrey;
+		border-left: 1px solid lightgrey;
+		position: relative;
+
+		&.bolt{
+
+			&:before, &:after{
+				content: '';
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: whitesmoke;
+				position: absolute;
+				bottom: -15px;
+				z-index: 4;
+			}
+
+			&:before{
+				left: -15px;
+			}
+
+			&:after{
+				right: -15px;
+			}
+		}
+	}
+
+	.bord{
+		border-bottom: 1px solid lightgrey;
+	}
+}
+
+@media screen and (max-width: $tablet-sm-screen){
+	.services{
+		.active{
+			border-right: none;
+			border-left: none;
+		}
+	}
+}

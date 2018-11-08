@@ -7,17 +7,25 @@ import { fromEvent } from "rxjs";
 @Component({
     selector: "app-header",
     templateUrl: "./header.component.html",
-    styleUrls: ["./header.component.css"]
+    styleUrls: ["./header.component.scss"]
 })
 export class HeaderComponent {
-    public scrolled: boolean = false;
+    navbarList: string[] = [
+        "Home",
+        "About",
+        "Services",
+        // "Work",
+        // "Testimonials",
+        "Blog",
+        "Contact"
+    ]
+    public scrollEnd: boolean = false;
 
     constructor(private headerService: HeaderService, private windowService: WindowService) {
         fromEvent(windowService.get(), "scroll")
         .subscribe(() => {
-            windowService.get().pageYOffset > 50 ? this.scrolled = true : this.scrolled = false;
+            windowService.get().pageYOffset > 3400 ? this.scrollEnd = true : this.scrollEnd = false;
         });
-        console.log(windowService.get().scroll)
     }
 
     openSideNav() {

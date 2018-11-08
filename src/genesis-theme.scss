@@ -1,4 +1,7 @@
 @import '~@angular/material/theming';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "~owl.carousel/src/scss/owl.theme.default.scss";
 
 @include mat-core();
 @import 'genesis-header-theme.scss';
@@ -6,23 +9,23 @@
 
 $md-primarypalette: (
         50 : #afd6f9,
-        100 : #68b1f4,
-        200 : #3497f0,
-        300 : #0f73cd,
-        400 : #0d63b0,
-        500 : #000000,
-        600 : #094377,
-        700 : #07335b,
-        800 : #05233f,
-        900 : #031322,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
+        100 : #ffffff,
+        200 : #ffffff,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #ffffff,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
         contrast: (
-                50 : #000000,
-                100 : #000000,
-                200 : #000000,
+                50 : #ffffff,
+                100 : #ffffff,
+                200 : #ffffff,
                 300 : #ffffff,
                 400 : #ffffff,
                 500 : #ffffff,
@@ -30,8 +33,8 @@ $md-primarypalette: (
                 700 : #ffffff,
                 800 : #ffffff,
                 900 : #ffffff,
-                A100 : #000000,
-                A200 : #000000,
+                A100 : #ffffff,
+                A200 : #ffffff,
                 A400 : #ffffff,
                 A700 : #ffffff,
         )
@@ -48,25 +51,25 @@ $md-accentpalette: (
         700 : #def7f5,
         800 : #def7f5,
         900 : #def7f5,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
+        A100 : #def7f5,
+        A200 : #def7f5,
+        A400 : #def7f5,
+        A700 : #def7f5,
         contrast: (
-                50 : #000000,
-                100 : #000000,
-                200 : #000000,
-                300 : #000000,
-                400 : #000000,
+                50 : #def7f5,
+                100 : #def7f5,
+                200 : #def7f5,
+                300 : #def7f5,
+                400 : #def7f5,
                 500 : #ffffff,
                 600 : #ffffff,
                 700 : #ffffff,
                 800 : #ffffff,
                 900 : #ffffff,
-                A100 : #000000,
-                A200 : #000000,
-                A400 : #000000,
-                A700 : #000000,
+                A100 : #def7f5,
+                A200 : #def7f5,
+                A400 : #def7f5,
+                A700 : #def7f5,
         )
 );
 
@@ -86,9 +89,9 @@ $md-warnpalette: (
         A400 : #ff0000,
         A700 : #e60000,
         contrast: (
-                50 : #000000,
-                100 : #000000,
-                200 : #000000,
+                50 : #ffffff,
+                100 : #ffffff,
+                200 : #ffffff,
                 300 : #ffffff,
                 400 : #ffffff,
                 500 : #ffffff,
@@ -96,16 +99,16 @@ $md-warnpalette: (
                 700 : #ffffff,
                 800 : #ffffff,
                 900 : #ffffff,
-                A100 : #000000,
-                A200 : #000000,
+                A100 : #ffffff,
+                A200 : #ffffff,
                 A400 : #ffffff,
                 A700 : #ffffff
         )
 );
 
 @mixin custom-theme($theme) {
-  @include genesis-header-theme($theme);
-  @include genesis-footer-theme($theme);
+//   @include genesis-header-theme($theme);
+//   @include genesis-footer-theme($theme);
 
 }
 
@@ -123,14 +126,8 @@ $genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accen
   background-color: whitesmoke;
 }
 
-//TODO: investigate why this class takes precedences over other classes
-.mat-drawer-container {
-        background-color: whitesmoke
-}
-
 .gns-dark-bg {
-   background-color: black;
-   color: white;
+   color: black;
  }
 
 .gns-dark-bg a {
@@ -146,5 +143,134 @@ $genesis-dark-app-theme: mat-dark-theme($genesis-app-primary, $genesis-app-accen
   color: black
 }
 
+$main-color: whitesmoke;
+$tablet-sm-screen: 767px;
+$desk-md-screen: 991px;
+
+/* ----------------------------------------------------------------
+				01 Basic
+-----------------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;
+	outline: none !important;
+	list-style: none;
+}
+
+body {
+	color: #333;
+	line-height: 1.3;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden !important;
+}
+
+h1, h2, h3, h4, h5, h6, .logo {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+p {
+  font-size: 15px;
+  color: #a3a3a3;
+  line-height: 1.6;
+  word-spacing: 1px;
+  margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+span, a, a:hover {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+}
+
+.section-head{
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.title{
+	display: inline-block;
+	font-size: 36px;
+	padding-bottom: 10px;
+	position: relative;
+	z-index: 2;
+}
+
+.full-width{
+	width: 100% !important;
+}
+
+.section-padding{
+  padding: 100px 0;
+}
+
+.owl-theme .owl-dots .owl-dot span{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgba(150,150,150,.4);
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span{
+	background: black;
+}
+
+/* ----------------------------------------------------------------
+				14 Responsive
+-----------------------------------------------------------------*/
+
+@media screen and (max-width: $desk-md-screen){
+	.navbar{
+
+		.navbar-collapse{
+			max-height: 320px;
+			overflow: auto;
+			background: #111;
+			text-align: center;
+			padding: 10px 0;
+		}
+
+		.nav-link{
+			margin: 10px auto !important;
+		}
+	}
+
+	.nav-scroll{
+
+		.navbar-collapse{
+
+			.nav-link{
+				color: #fff !important;
+			}
+
+			.active{
+				color: $main-color !important;
+			}
+		}
+	}
+
+	.services{
+
+		.item{
+			padding: 0;
+		}
+
+		.active{
+			border:0;
+		}
+
+		.bord{
+			display: none;
+		}
+	}
+}
 
 

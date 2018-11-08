@@ -1,0 +1,48 @@
+/* ----------------------------------------------------------------
+				10 Testimonials
+-----------------------------------------------------------------*/
+
+.testimonials{
+    background-color: #1C1F24;
+    color: whitesmoke;
+
+    .title:after {
+        background: #eee;
+    }
+    
+	.icon{
+		font-size: 40px;
+		margin-bottom: 15px;
+	}
+
+	.citem{
+
+		p{
+			font-size: 18px;
+			word-spacing: 2px;
+			margin-bottom: 15px;
+		}
+
+		h5{
+			font-size: 16px;
+			display: inline-block;
+			padding-right: 10px;
+			margin-right: 10px;
+			position: relative;
+
+			&:after{
+				content: "|";
+				position: absolute;
+				right: -5px;
+				bottom: 4px;
+			}
+		}
+
+		h6{
+			display: inline-block;
+			font-weight: 400;
+			font-size: 14px;
+			margin: 15px 0;
+		}
+	}
+}

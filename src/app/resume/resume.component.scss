@@ -1,0 +1,105 @@
+/* ----------------------------------------------------------------
+				06 Resume
+-----------------------------------------------------------------*/
+$main-color: whitesmoke;
+$tablet-sm-screen: 767px;
+$desk-md-screen: 991px;
+$phone-sm-screen: 321px;
+
+.resume{
+    background-color: #1C1F24;
+    color: whitesmoke;
+	padding: 50px 0;
+
+	.title{
+		margin-bottom: 20px;
+		letter-spacing: 2px;
+    }
+    
+	.item{
+		text-align: left;
+		padding-bottom: 30px;
+		h5{
+			font-size: 25px;
+			font-weight: 400;
+		}
+
+		.icon{
+			font-size: 30px;
+			color: $main-color;
+			margin-bottom: 15px;
+		}
+
+		li{
+			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			h6{
+				color: #eee;
+				font-size: 16px;
+				font-weight: 600;
+				font-family: inherit;
+				margin-bottom: 5px;
+			}
+
+			p{
+				color: #999;
+			}
+		}
+	}
+
+	.skills{
+
+		.skill{
+			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
+
+			h6{
+				margin-bottom: 8px;
+				font-size: 14px;
+				font-weight: 400;
+
+				span{
+					padding: 4px 8px 0;
+					font-size: 10px;
+					float: right;
+					background: rgba(80,80,80,.3);
+					position: relative;
+					top: 8px;
+				}
+			}
+
+			.skills-progress{
+				position: relative;
+				width: 100%;
+				height: 4px;
+				background: rgba(80,80,80,.3);
+
+				span{
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 5%;
+					background: $main-color;
+					transition: all 1s;
+				}
+			}
+		}
+	}
+}
+
+
+@media screen and (max-width: $tablet-sm-screen){
+	.resume{
+		.item{
+			text-align: center;
+		}
+	}
+}

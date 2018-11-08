@@ -1,0 +1,24 @@
+<section class="testimonials section-padding bg-img" data-overlay-dark="8" data-scroll-index="4">
+  <div class="container">
+    <div class="row">
+
+      <!-- Section-Head -->
+      <div class="section-head full-width mb-50">
+        <span class="icon icon-quote"></span>
+        <br>
+        <h4 class="title">Testimonials</h4>
+      </div>
+
+      <div class="offset-md-1 col-md-10">
+        <div class="owl-carousel owl-theme text-center">
+          <div class="citem" *ngFor="let testimonial of testimonials">
+            <p>{{testimonial.feed}}</p>
+            <h5>{{testimonial.by}}</h5>
+            <h6>{{testimonial.from}}</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

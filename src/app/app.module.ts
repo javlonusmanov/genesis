@@ -10,7 +10,6 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { BrowserModule } from "@angular/platform-browser";
 import { environment } from "../environments/environment";
 import { FooterComponent } from "./footer/footer.component";
-import { FooterContentComponent, PizzaPartyComponent } from "./footer-content/footer-content.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HeaderComponent } from "./header/header.component";
 import { HomePageComponent } from "./home-page/home-page.component";
@@ -22,6 +21,10 @@ import { RouterModule, Routes } from "@angular/router";
 import { WorkPageComponent } from "./work-page/work-page.component";
 import { HeaderService } from "./header/header.service";
 import { WindowService } from "./utility-services/window.service";
+import { ResumeComponent } from './resume/resume.component';
+import { ServicesComponent } from './services/services.component';
+import { TestimonialComponent } from './testimonial/testimonial.component';
+import { PizzaPartyComponent } from './footer/footer.component';
 
 const routes: Routes = [
     { path: "", component: HomePageComponent },
@@ -40,10 +43,9 @@ const routes: Routes = [
         WorkPageComponent,
         BlogPageComponent,
         AboutPageComponent,
-        FooterContentComponent,
-        PizzaPartyComponent
-    ],
-    entryComponents: [
+        ResumeComponent,
+        ServicesComponent,
+        TestimonialComponent,
         PizzaPartyComponent
     ],
     imports: [

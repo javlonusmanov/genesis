@@ -8,19 +8,12 @@ import { HeaderService } from "./header/header.service";
     styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-    @ViewChild("sidenav") sidenav: MatSidenav;
-
     constructor(private headerService: HeaderService) {
     }
 
     close() {
-        this.sidenav.close();
         this.headerService.change();
     }
 
-    ngOnInit(): void {
-        this.headerService.isActive.subscribe((value) => {
-            value ? this.sidenav.open() : this.sidenav.close();
-        });
-    }
+    ngOnInit(): void {}
 }

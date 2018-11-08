@@ -1,0 +1,23 @@
+.example-card {
+    max-width: 95%;
+} 
+  
+$main-color: whitesmoke;
+
+//TODO: repeated in styles.css
+// .blog .owl-carousel .owl-stage-outer {
+//     padding: 15px 15px;
+// }
+
+.blog {
+    ::ng-deep .mat-card-header-text {
+        margin: 0px;
+    }
+
+    h3{
+        font-size: 22px;
+        font-weight: 700;
+        color: #666;
+        margin-bottom: 15px;
+    }
+}
