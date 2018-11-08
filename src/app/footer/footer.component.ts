@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { AbstractControl, FormBuilder, FormGroup, NgForm, Validators } from "@angular/forms";
 import { MatSnackBar } from "@angular/material";
-import { AngularFirestore, AngularFirestoreCollection } from "angularfire2/firestore";
+import { AngularFirestore, AngularFirestoreCollection } from "@angular/fire/firestore";
 import { Observable } from "rxjs/Observable";
 
 export class Message {

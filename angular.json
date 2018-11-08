@@ -34,7 +34,7 @@
               "src/jquery-migrate-3.0.0.min.js",
               "src/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
-              "src/scrollit.min.js",
+              "src/scrollIt.min.js",
               "src/jquery.waypoints.min.js",
               "src/jquery.counterup.min.js",
               "node_modules/owl.carousel/dist/owl.carousel.min.js",

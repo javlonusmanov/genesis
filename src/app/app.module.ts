@@ -1,9 +1,9 @@
 import { AboutPageComponent } from "./about-page/about-page.component";
-import { AngularFireAuthModule } from "angularfire2/auth";
-import { AngularFireDatabaseModule } from "angularfire2/database";
-import { AngularFireModule } from "angularfire2";
-import { AngularFireStorageModule } from "angularfire2/storage";
-import { AngularFirestoreModule } from "angularfire2/firestore";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AppComponent } from "./app.component";
 import { BlogPageComponent } from "./blog-page/blog-page.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
