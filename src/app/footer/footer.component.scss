@@ -25,6 +25,8 @@ $phone-sm-screen: 321px;
 }
 
 .mat-button {
+    height: 4vh;
+    min-height: 50px;
     color: whitesmoke;
     margin-top: 20px;
     min-width: 150px;
