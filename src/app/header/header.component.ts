@@ -1,13 +1,38 @@
-import { Component, ElementRef, EventEmitter, Output } from "@angular/core";
+import { Component, HostListener, ElementRef } from "@angular/core";
 import { HeaderService } from "./header.service";
 import { WindowService } from "../utility-services/window.service";
 import { fromEvent } from "rxjs";
-// import 'rxjs/add/operator/bufferCount';
+import {
+    trigger, state, style, transition,
+    animate, group, query, stagger, keyframes
+} from '@angular/animations';
 
 @Component({
     selector: "app-header",
     templateUrl: "./header.component.html",
-    styleUrls: ["./header.component.scss"]
+    styleUrls: ["./header.component.scss"],
+    animations: [[
+        trigger('slideInOut', [
+            state('open', style({
+                'max-height': '420px'
+            })),
+            state('close', style({
+                'max-height': '0px'
+            })),
+            transition('open => close', [group([
+                animate('195ms ease-out', style({
+                    'max-height': '0px',
+                })),
+            ]
+            )]),
+            transition('close => open', [group([
+                animate('225ms ease-in', style({
+                    'max-height': '420px',
+                }))
+            ]
+            )])
+        ]),
+    ]]
 })
 export class HeaderComponent {
     navbarList: string[] = [
@@ -19,16 +44,25 @@ export class HeaderComponent {
         "Blog",
         "Contact"
     ]
-    public scrollEnd: boolean = false;
+    public scrolled: boolean = false;
+    public menuCollapsed: boolean = false;
 
-    constructor(private headerService: HeaderService, private windowService: WindowService) {
-        fromEvent(windowService.get(), "scroll")
-        .subscribe(() => {
-            windowService.get().pageYOffset > 3400 ? this.scrollEnd = true : this.scrollEnd = false;
-        });
+    constructor(private windowService: WindowService, private el: ElementRef) {
+        fromEvent(this.windowService.get(), "scroll")
+            .subscribe(() => {
+                this.scrolled = this.windowService.get().scrollY > 100;
+            });
     }
 
-    openSideNav() {
-        this.headerService.change();
+    test() {
+        this.menuCollapsed = !this.menuCollapsed;
+    }
+
+    @HostListener('document:click', ['$event.target'])
+    onClick(targetElement) {
+        const clickedInside = this.el.nativeElement.contains(targetElement);
+        if (this.menuCollapsed && !clickedInside) {
+            this.menuCollapsed = false;
+        }
     }
 }

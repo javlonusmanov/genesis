@@ -19,6 +19,13 @@ svg:hover {
 	padding-left: 10px !important;
 	padding-right: 10px !important;
 }
+.menu-btn {
+	display: none;
+}
+
+a:hover {
+	cursor:pointer;
+}
 
 .navbar{
 	background: #fff;
@@ -33,8 +40,34 @@ svg:hover {
 		color: whitesmoke;
 	}
 
+	.navicon {
+		background: #fff;
+		display: block;
+		height: 2px;
+		position: relative;
+		width: 18px;
+	}
+
+	.navicon:before, .navicon:after {
+	  background: #fff;
+	  content: '';
+	  display: block;
+	  height: 100%;
+	  position: absolute;
+	  transition: all .2s ease-out;
+	  width: 100%;
+	}
+
+	.navicon:before {
+		top: 5px;
+	  }
+	  
+	.navicon:after {
+		top: -5px;
+	}
+
 	.navbar-nav{
-		
+	
 		.nav-link{
 			color: $logo-color !important;
 			font-size: 14px;
@@ -59,6 +92,14 @@ svg:hover {
 
 	.icon-bar{
 		color: #222;
+	}
+
+	.navicon {
+		background: #222;
+	}
+
+	.navicon:before, .navicon:after {
+	  background: #222;
 	}
 
 	.navbar-nav{
