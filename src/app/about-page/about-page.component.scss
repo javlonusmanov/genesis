@@ -2,7 +2,9 @@
 				05 Hero
 -----------------------------------------------------------------*/
 $main-color: whitesmoke;
-
+$tablet-sm-screen: 767px;
+$desk-md-screen: 991px;
+$phone-sm-screen: 321px;
 
 .hero{
     mat-button {
@@ -70,6 +72,15 @@ $main-color: whitesmoke;
 					color: #fff;
 				}
 			}
+		}
+	}
+}
+
+@media screen and (max-width: $tablet-sm-screen){
+	.hero{
+		text-align: right;
+		.content{
+			text-align: center;
 		}
 	}
 }
