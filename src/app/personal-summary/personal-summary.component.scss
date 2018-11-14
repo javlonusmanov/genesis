@@ -9,16 +9,18 @@ h1 {
     font-size: 60px;
 }
 
+section {
+	padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
 .content {
     text-align: center;
-    min-height: 100vh;
-    padding-top: 300px;
-    padding-bottom: 250px;
     background-color: #1C1F24; 
     color: whitesmoke; 
 
 	.arrow{
-		position: absolute;
+		position: relative;
 		bottom: 7vh;
 		width: 100%;
 		text-align: center;
@@ -59,17 +61,19 @@ h1 {
 }
 
 @media screen and (max-width: $tablet-sm-screen){
+	.content {
+		min-height: 100vh;
+		.arrow {
+			position: absolute;
+		}
+	}
+	
 	h1 {
 		font-size: 50px;
 	}
 	
 	h2 {
 		font-size: 30px;
-	}
-
-	.content {
-		padding-top: 100px;
-		padding-bottom: 75px;
 	}
 }
 
