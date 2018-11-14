@@ -28,24 +28,20 @@ $(function() {
 
 
 
-    // navbar scrolling background
-    wind.on("scroll",function () {
+    // // navbar scrolling background
+    // wind.on("scroll",function () {
 
-        var bodyScroll = wind.scrollTop(),
-            navbar = $(".navbar"),
-            logo = $(".navbar .logo> img");
+    //     var bodyScroll = wind.scrollTop(),
+    //         navbar = $(".navbar"),
+    //         logo = $(".navbar .logo> img");
 
-        if(bodyScroll > 100){
+    //     if(bodyScroll > 100){
+    //         navbar.addClass("nav-scroll");
+    //     }else{
 
-            navbar.addClass("nav-scroll");
-            logo.attr('src', 'img/logo-dark.png');
-
-        }else{
-
-            navbar.removeClass("nav-scroll");
-            logo.attr('src', 'img/logo-light.png');
-        }
-    });
+    //         navbar.removeClass("nav-scroll");
+    //     }
+    // });
 
 
 
