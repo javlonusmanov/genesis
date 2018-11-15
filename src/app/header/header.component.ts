@@ -1,5 +1,4 @@
 import { Component, HostListener, ElementRef } from "@angular/core";
-import { HeaderService } from "./header.service";
 import { WindowService } from "../utility-services/window.service";
 import { fromEvent } from "rxjs";
 import {
@@ -59,6 +58,7 @@ export class HeaderComponent {
     }
 
     @HostListener('document:click', ['$event.target'])
+    @HostListener('document:touchstart', ['$event.target'])
     onClick(targetElement) {
         const clickedInside = this.el.nativeElement.contains(targetElement);
         if (this.menuCollapsed && !clickedInside) {
