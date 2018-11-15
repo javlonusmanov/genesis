@@ -40,18 +40,20 @@ a:hover {
 		color: whitesmoke;
 	}
 
-	.navicon {
+	.navicon, .navicon:before, .navicon:after {
 		background: #fff;
 		display: block;
+		position: relative;
+	}
+
+	.navicon {
 		height: 2px;
 		position: relative;
 		width: 18px;
 	}
 
 	.navicon:before, .navicon:after {
-	  background: #fff;
 	  content: '';
-	  display: block;
 	  height: 100%;
 	  position: absolute;
 	  transition: all .2s ease-out;
@@ -94,12 +96,8 @@ a:hover {
 		color: #222;
 	}
 
-	.navicon {
+	.navicon, .navicon:before, .navicon:after {
 		background: #222;
-	}
-
-	.navicon:before, .navicon:after {
-	  background: #222;
 	}
 
 	.navbar-nav{
@@ -113,6 +111,25 @@ a:hover {
 		fill: black;
 		stroke: black;
 	  }
+}
+
+
+.rotate {
+	.navicon {
+		background: transparent;
+	}
+	
+	.navicon:before, .navicon:after {
+		top: 0;
+	}
+	  
+	.navicon:before {
+		transform: rotate(45deg);
+	}
+
+	.navicon:after {
+		transform: rotate(-45deg);
+	}
 }
 
 
