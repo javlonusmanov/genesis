@@ -14,7 +14,7 @@
         </a>
 
         <button class="navbar-toggler" [ngClass]="{'rotate': menuCollapsed}" (click)="test()" type="button">
-            <span class="navicon" ></span>
+            <span class="navicon"></span>
         </button>
 
         <div [@slideInOut]="menuCollapsed ? 'open' : 'close'" (click)="test()" [ngClass] = "{'show': menuCollapsed}" class="collapse navbar-collapse">

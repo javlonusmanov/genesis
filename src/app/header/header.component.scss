@@ -6,8 +6,8 @@ $desk-md-screen: 991px;
 svg {
   fill: $logo-color;
   stroke: $logo-color;
-  height: 60px;
-  width: 60px;
+  height: calc(40px + 2vw);
+  width: calc(40px + 2vw);
 }
 
 svg:hover {
@@ -28,12 +28,11 @@ a:hover {
 }
 
 .navbar{
-	background: #fff;
+	background: transparent;
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
-	background: #1C1F24;
 	z-index: 9;
 
 	.icon-bar{

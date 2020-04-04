@@ -48,11 +48,6 @@ const routes: Routes = [
         PizzaPartyComponent
     ],
     imports: [
-        AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
-        AngularFireDatabaseModule,
-        AngularFireModule.initializeApp(environment.firebase),
-        AngularFireStorageModule, // imports firebase/storage only needed for storage features
-        AngularFirestoreModule, // imports firebase/firestore, only needed for database features
         BrowserAnimationsModule,
         BrowserModule,
         FormsModule,

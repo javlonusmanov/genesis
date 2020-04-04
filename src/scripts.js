@@ -26,25 +26,6 @@ $(function() {
       topOffset: -63            // offste (in px) for fixed top navigation
     });
 
-
-
-    // // navbar scrolling background
-    // wind.on("scroll",function () {
-
-    //     var bodyScroll = wind.scrollTop(),
-    //         navbar = $(".navbar"),
-    //         logo = $(".navbar .logo> img");
-
-    //     if(bodyScroll > 100){
-    //         navbar.addClass("nav-scroll");
-    //     }else{
-
-    //         navbar.removeClass("nav-scroll");
-    //     }
-    // });
-
-
-
     // progress bar
     wind.on('scroll', function () {
         $(".skills-progress span").each(function () {

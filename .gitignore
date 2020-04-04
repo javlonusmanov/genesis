@@ -42,6 +42,5 @@ testem.log
 Thumbs.db
 
 /dist
-/firebase.ts
 /test.sh
 /.vscode
