@@ -35,13 +35,10 @@ import {
 })
 export class HeaderComponent {
     navbarList: string[] = [
-        "Home",
-        "About",
-        "Services",
+        // "Home",
+        // "About",
         // "Work",
         // "Testimonials",
-        "Blog",
-        "Contact"
     ]
     public scrolled: boolean = false;
     public menuCollapsed: boolean = false;
