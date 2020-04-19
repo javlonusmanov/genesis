@@ -6,18 +6,17 @@ $phone-sm-screen: 321px;
 
 .headline {
 	font-weight: bolder;
-	font-size: calc(30px + 3vw);
 	text-shadow: 0px 1px 3px rgba(0,0,0,.8);
 	letter-spacing: -2px;
 }
 
 .test {
-	font-size: calc(20px + 0.1vw);
 	font-weight: 300;
 	color: #a8a8a8;
-	width: 40%;
+	width: 80%;
 	margin: 0 auto;
 }
+
 
 section {
 	display: flex;
@@ -44,7 +43,7 @@ hr {
 		height: calc(40px + 1vw);
 		line-height: 40px;
 		text-align: center;
-		font-size: 15px;
+		font-size: 0.7em;
 		margin: 15px 5px 15px 0;
 		cursor: pointer;
 		transition: all .5s;
@@ -102,13 +101,13 @@ hr {
 
 @media screen and (max-width: $tablet-sm-screen){
 	.test {
-		width: 70%;
+		width: 85%;
 	}
 }
 
 @media screen and (max-width: $phone-sm-screen){
 	.test {
-		width: 80%;
+		width: 85%;
 	}
 	section {
 		padding-top: 100px;

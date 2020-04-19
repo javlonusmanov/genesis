@@ -6,8 +6,13 @@ $desk-md-screen: 991px;
 svg {
   fill: $logo-color;
   stroke: $logo-color;
-  height: calc(40px + 2vw);
-  width: calc(40px + 2vw);
+  height: calc(3em + 2vw);
+  width: calc(3em + 2vw);
+}
+
+.test {
+	padding: 15px 0;
+	margin: 0 auto
 }
 
 svg:hover {
@@ -71,9 +76,7 @@ a:hover {
 	
 		.nav-link{
 			color: $logo-color !important;
-			font-size: 14px;
 			font-weight: 600;
-			color: black;
 			letter-spacing: .5px;
 			margin: 15px 5px;
 			transition: all .5s;
@@ -109,6 +112,8 @@ a:hover {
 	svg {
 		fill: black;
 		stroke: black;
+		height: calc(1em + 1vw);
+		width: calc(1em + 1vw);
 	  }
 }
 
@@ -132,7 +137,7 @@ a:hover {
 }
 
 
-@media screen and (max-width: $desk-md-screen){
+@media screen and (min-width: $desk-md-screen){
 	.navbar{
 		.navbar-collapse {
 			overflow: hidden;
